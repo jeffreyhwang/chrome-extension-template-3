@@ -2,7 +2,7 @@ chrome.runtime.sendMessage({
     message: "get_var"
 }, response => {
     if (response.message === 'success') {
-        // do something with `${response.payload}`;
+        document.getElementById('varSpan').innerHTML = `${response.payload}`;
     }
 });
 
@@ -12,7 +12,8 @@ document.getElementById('varChangeButton').addEventListener('click', () => {
         payload: document.getElementById('varTextBox').value
     }, response => {
         if (response.message === "success") {
-            console.log("success");
+            console.log("var changed");
+            document.getElementById('varSpan').innerHTML = document.getElementById('varTextBox').value;
         }
     })
 });
