@@ -1,0 +1,40 @@
+{
+    "name": "Extension Name",
+    "description": "Extension Description",
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "/images/icon.png",
+        "32": "/images/icon.png",
+        "48": "/images/icon.png",
+        "128": "/images/icon.png"
+    },
+    "background": {
+        "service_worker": "/js/background.js"
+    },
+    "action": {
+        "default_popup": "/html/popup.html",
+        "default_icon": {
+            "16": "/images/icon.png",
+            "32": "/images/icon.png",
+            "48": "/images/icon.png",
+            "128": "/images/icon.png"
+        }
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [ "/images/[image-to-expose.png]" ],
+            "matches": ["<all_urls>"]
+        }
+
+    ],
+    "options_page": "/html/options.html",
+    "permissions": [
+        "contextMenus",
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": ["*://*/"]
+}

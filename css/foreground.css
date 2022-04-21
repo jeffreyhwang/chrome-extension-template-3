@@ -1,0 +1,23 @@
+.ce_main {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    z-index: 999999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+}
+
+.ce_main input {
+    pointer-events: all;
+}
+
+.ce_main button {
+    pointer-events: all;
+}
